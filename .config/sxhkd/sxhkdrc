@@ -1,0 +1,37 @@
+XF86MonBrightnessUp
+    brightnessctl -d intel_backlight set 10%+
+
+XF86MonBrightnessDown
+    brightnessctl -d intel_backlight set 10%-
+
+XF86AudioLowerVolume
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioRaiseVolume
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioMute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioPlay
+    playerctl --player=spotify play-pause
+
+XF86AudioNext
+    playerctl --player=spotify next
+
+XF86AudioPrev
+    playerctl --player=spotify previous
+
+super + shift + b
+    pkill dwmblocks && /usr/local/bin/dwmblocks
+
+super + a
+    anki
+
+super + r
+    st -e sh -c "ranger"
+
+super + shift + a
+    st -e sh -c "vim ~/shittodo"
+
+
