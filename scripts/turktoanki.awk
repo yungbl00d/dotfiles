@@ -16,7 +16,7 @@ inside_def == 1 && found_separator == 0 && /—/{
 }
 
 inside_def == 1 && found_separator == 0 {
-	front = front " " $0
+	front = front " " $0 " "
 }
 
 inside_def == 0 && /^[0-9].*[^0-9]$/ {
@@ -35,7 +35,7 @@ inside_def == 1 && /[0-9].*[0-9]$/ {
 }
 
 inside_def == 1 && found_separator == 1 && hit_separator != 1 {
-	back = back " " $0
+	back = back " " $0 " "
 }
 
 {
