@@ -1,5 +1,5 @@
 #show-read-feeds no
-auto-reload yes
+#auto-reload yes
 
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
@@ -32,7 +32,7 @@ color article white default bold
 browser ~/scripts/linkhandler
 macro , open-in-browser
 macro f set browser "firefox" ; open-in-browser ; set browser linkhandler
-macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best" ; open-in-browser ; set browser linkhandler
+macro a set browser "cd ~/Videos; tsp youtube-dl --add-metadata -ciw" ; open-in-browser ; set browser linkhandler
 macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---" yellow

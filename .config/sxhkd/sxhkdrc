@@ -4,6 +4,12 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     brightnessctl -d intel_backlight set 10%-
 
+super + Up
+    brightnessctl -d intel_backlight set 10%+
+
+super + Down
+    brightnessctl -d intel_backlight set 10%-
+
 XF86AudioLowerVolume
     pactl set-sink-volume @DEFAULT_SINK@ -5%
 
@@ -33,5 +39,8 @@ super + r
 
 super + shift + a
     st -e sh -c "vim ~/shittodo"
+
+control + alt + n
+    st -e sh -c "newsboat"
 
 
