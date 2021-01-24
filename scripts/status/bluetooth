@@ -1,0 +1,14 @@
+
+ powered=$(echo -e "show" | bluetoothctl | awk '/Powered/ {print $2}')
+case $BLOCK_BUTTON in 
+	1) powered="lol"
+esac
+ 	
+
+ case "$powered" in 
+ 	"yes") powered="On" ;;
+	"no")powered="Off" ;;
+esac
+echo " $powered"
+
+
