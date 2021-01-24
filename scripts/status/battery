@@ -13,10 +13,10 @@ do
 	status=$(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | awk '/state/ {print $2}')
 	case "$status" in
 		"fully-charged") status="⚡" ;;
-		"discharging") status="🔋" ;;
-		"Charging") status="🔌" ;;
+		"discharging") status="" ;;
+		"charging") status="" ;;
 		"Not charging") status="🛑" ;;
-		"Unknown") status="♻️" ;;
+		"Unknown") status="" ;;
 	esac
 	capacity=$(cat "$battery/capacity")
 	# Will make a warn variable if discharging and low

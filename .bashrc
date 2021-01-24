@@ -14,9 +14,14 @@ pac_install() {
 	sudo pacman -S "$1"
 }
 alias pac=pac_install
+make_and_cd() {
+	mkdir $1 && cd $1
+}
+alias mkcd=make_and_cd
 alias pls='sudo $(fc -ln -1)'
 alias smci="sudo make clean install"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias dotst="dotfiles status -uno"
 
 eval "$(thefuck --alias)"
 # dwmswallow $WINDOWID -c Zathura

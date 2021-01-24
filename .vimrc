@@ -11,3 +11,6 @@ map ?  <Plug>(incsearch-backward)
 
 set relativenumber
 set number
+set ignorecase
+set smartcase
+

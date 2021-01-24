@@ -11,13 +11,13 @@ super + Down
     brightnessctl -d intel_backlight set 10%-
 
 XF86AudioLowerVolume
-    pactl set-sink-volume @DEFAULT_SINK@ -5%
+    pactl set-sink-volume @DEFAULT_SINK@ -5% && kill -36 $(pidof dwmblocks)
 
 XF86AudioRaiseVolume
-    pactl set-sink-volume @DEFAULT_SINK@ +5%
+    pactl set-sink-volume @DEFAULT_SINK@ +5% && kill -36 $(pidof dwmblocks)
 
 XF86AudioMute
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle && kill -36 $(pidof dwmblocks)
 
 XF86AudioPlay
     playerctl --player=spotify play-pause
@@ -40,7 +40,9 @@ super + r
 super + shift + a
     st -e sh -c "vim ~/shittodo"
 
+super + shift + z
+    st -e sh -c "vim ~/notes"
+
 control + alt + n
     st -e sh -c "newsboat"
-
 
