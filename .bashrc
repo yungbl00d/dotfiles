@@ -22,8 +22,9 @@ alias pls='sudo $(fc -ln -1)'
 alias smci="sudo make clean install"
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias dotst="dotfiles status -uno"
+alias vi="nvim"
 
-eval "$(thefuck --alias)"
+#eval "$(thefuck --alias)"
 # dwmswallow $WINDOWID -c Zathura
 # dwmswallow $WINDOWID -c mpv
 # dwmswallow $WINDOWID -c feh
@@ -31,3 +32,8 @@ eval "$(thefuck --alias)"
 shopt -s autocd
 set -o vi
 set show-mode-in-prompt on
+
+alias pacfind="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias aurfind="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
+alias wifi="stalonetray & nm-applet"
+eval `opam env`

@@ -13,4 +13,5 @@ set relativenumber
 set number
 set ignorecase
 set smartcase
+set signcolumn=yes
 

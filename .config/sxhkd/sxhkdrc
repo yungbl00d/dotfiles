@@ -46,3 +46,30 @@ super + shift + z
 control + alt + n
     st -e sh -c "newsboat"
 
+alt + Tab
+    rofi -show window
+
+super + shift + k
+    /home/theo/scripts/keyboard_xprops.sh
+
+super + shift + equal
+    slock
+
+super + shift + r
+    tdrop -ma -w 1024 -y 15  --wm dwm -s dropdown st
+
+super + t
+    st -e sh -c 'vim ~/obsidian/todos/todo-`date +%m-%e-%y`'
+
+super + shift + t
+    st -e sh -c "vim ~/obsidian/todos/todo-`date --date='-1 day' +%m-%e-%y`"
+
+super + shift + n
+    st -e sh -c "newsboat"
+
+super + shift + w
+    scrot "$(xclip -o).png" -e 'mv $f ~/shots/'
+
+super + shift + p
+    flameshot gui
+

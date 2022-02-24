@@ -1,8 +1,6 @@
-#show-read-feeds no
-#auto-reload yes
-
 external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 
+save-path ~/newsboat
 bind-key j down
 bind-key k up
 bind-key j next articlelist
@@ -24,9 +22,11 @@ bind-key x pb-delete
 bind-key b sort
 bind-key B rev-sort
 
+reload-threads 4
+
 color listnormal cyan default
 color listfocus black yellow standout bold
-color listnormal_unread blue default
+color listnormal_unread white default
 color listfocus_unread yellow default bold
 color info red black bold
 color article white default bold
@@ -34,8 +34,9 @@ color article white default bold
 browser ~/scripts/linkhandler
 macro , open-in-browser
 macro f set browser "firefox" ; open-in-browser ; set browser linkhandler
+macro p set browser "firefox --private-window" ; open-in-browser ; set browser linkhandler
 macro a set browser "cd ~/Videos; tsp youtube-dl --add-metadata -ciw" ; open-in-browser ; set browser linkhandler
-macro v set browser "setsid -f mpv" ; open-in-browser ; set browser linkhandler
+macro v set browser "setsid -f mpv --no-terminal" ; open-in-browser ; set browser linkhandler
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
