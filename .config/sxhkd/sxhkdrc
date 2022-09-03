@@ -73,3 +73,6 @@ super + shift + w
 super + shift + p
     flameshot gui
 
+super + Escape
+    tdrop -ma -w 1024 -y 15  --wm dwm -s dropdown st
+

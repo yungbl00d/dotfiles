@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-export PATH="$HOME/.local/bin:$HOME/.local/share:$HOME/scripts/status:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/share:$HOME/scripts/status:$HOME/scripts:$PATH"
 
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
@@ -36,4 +36,5 @@ set show-mode-in-prompt on
 alias pacfind="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias aurfind="paru -Slq | fzf --multi --preview 'paru -Si {1}' | xargs -ro paru -S"
 alias wifi="stalonetray & nm-applet"
+alias shutup="sudo rmmod pcspkr"
 eval `opam env`

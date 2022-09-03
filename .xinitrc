@@ -6,4 +6,5 @@ setxkbmap -option caps:escape
 #pulseaudio --start
 dex -a
 #$HOME/.local/share/dwmblocks/dwmblocks &
+setsid xss-lock slock &
 exec dwm
